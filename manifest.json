@@ -1,0 +1,21 @@
+{
+    "name": "Listed link on twitter.com",
+    "version": "0.9",
+    "description": "This extension added a link of Listed on twitter.com.",
+    "background_page": "background.html",
+    "icons": {
+      "128": "icon.png",
+      "48": "icon48.png"
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://twitter.com/*","https://twitter.com/*"],
+            "js": ["jquery-1.5.2.min.js", "page.js"],
+            "run_at":"document_end"
+        }
+    ],
+    "permissions": [
+        "http://api.twitter.com/",        
+        "https://api.twitter.com/"
+    ]
+}
